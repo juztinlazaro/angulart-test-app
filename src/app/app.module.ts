@@ -1,6 +1,7 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { NgbModule, NgbActiveModal } from "@ng-bootstrap/ng-bootstrap";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { StoreModule } from "@ngrx/store";
 
 import { AppComponent } from "./rootApp/app.component";
@@ -18,7 +19,6 @@ import { ModalComponent } from "./components/modal/modal.component";
 
 import { PageTitleService } from "./common/service/pageTitle.service";
 import { rootReducer } from "./store/rootReducer";
-import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -37,6 +37,7 @@ import { FormsModule } from "@angular/forms";
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
     NgbModule,
     StoreModule.forRoot(rootReducer)
